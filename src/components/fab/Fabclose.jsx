@@ -6,47 +6,53 @@ import FormCard from "./FormCard";
 
 function Fabclose() {
   const [isOpen, setIsOpen] = useState(false);
-   const [isReportOpen, setIsReportOpen] = useState(false)
-   const [closeBtns, setCloseBtns] = useState(false)
-   function callReportform(){
-    setIsReportOpen(!isReportOpen)
-    setCloseBtns(!closeBtns)
-   }
+  const [isReportOpen, setIsReportOpen] = useState(false);
+  const [closeBtns, setCloseBtns] = useState(false);
+  function callReportform() {
+    setIsReportOpen(!isReportOpen);
+    setCloseBtns(!closeBtns);
+  }
+  console.log(closeBtns);
 
   function handleClick() {
     setIsOpen(!isOpen);
   }
   return (
     <>
-    <div className={`${closeBtns ? "fab-flex" : "fab"}`}>
+    <div className={`${closeBtns ? "main-fab" : "fab"}`}>
+    {isReportOpen && <FormCard />}
+    </div>
+      <div className={`${closeBtns ? "fab-flex" : "fab"}`}>
         {isOpen && (
           <>
-
-         { isReportOpen && (<FormCard/>)}
-
             <div className="btn-nav-list">
-              <div className="comment">Report an issue</div>
-              <button className="fab-button" onClick={()=>{callReportform()}}>
+              {!closeBtns && <div className="comment">Report an issue</div>}
+              <button
+                className="fab-button"
+                onClick={() => {
+                  callReportform();
+                }}
+              >
                 <img src={svg.flag} alt="" />
               </button>
             </div>
 
             <div className="btn-nav-list">
-              <div className="comment">Share Feedback</div>
+            {!closeBtns && <div className="comment">Share Feedback</div>}
               <button className="fab-button">
                 <img src={svg.feedback} alt="" />
               </button>
             </div>
 
             <div className="btn-nav-list">
-              <div className="comment">Give suggestion</div>
+            {!closeBtns && <div className="comment">Give suggestion</div>}
               <button className="fab-button">
                 <img src={svg.suggestion} alt="" />
               </button>
             </div>
 
             <div className="btn-nav-list">
-              <div className="comment">Contact Us</div>
+            {!closeBtns && <div className="comment">Contact Us</div>}
               <button className="fab-button">
                 <img src={svg.contact} alt="" />
               </button>

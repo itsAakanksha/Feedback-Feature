@@ -63,7 +63,7 @@ function App() {
         <Fabclose/>
         </div>
 
-        <FormCard/>
+  
 
     
     </>
