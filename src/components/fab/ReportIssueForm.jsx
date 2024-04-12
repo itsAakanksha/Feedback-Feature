@@ -37,7 +37,7 @@ const ReportIssueForm = ({ currentSection }) => {
           <label htmlFor="issue-description">Describe the issue in detail:</label>
           <textarea
             id="issue-description"
-            rows="4"
+            rows="6"
             value={issueDescription}
             onChange={handleDescriptionChange}
             placeholder="Enter your description here..."
