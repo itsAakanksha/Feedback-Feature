@@ -3,7 +3,7 @@ import "./App.css";
 import svg from "../config.js";
 import Card from "./components/Cards/Card.jsx";
 import Fabclose from "./components/fab/Fabclose.jsx";
-import FormCard from "./components/fab/FormCard.jsx";
+import FormCard from "./components/fab/ReportIssueForm.jsx";
 function App() {
   return (
     <>

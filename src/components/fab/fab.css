@@ -28,7 +28,7 @@
 
   .fab-button{
     background: #F8F8F8;
-   margin:15px 0 ;
+   margin:15px 5px ;
     /* color: #808080; */
     position: fixed;
     width: 60px;
@@ -38,9 +38,16 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    border: none;
     cursor: pointer;
   }
 
+  .selected-btn{
+    box-shadow: 1px 1px 8px 0px #00000080;
+     outline: 2px solid grey; /* Adjust outline color and width as needed */
+     /* border: 4px solid grey; */
+     outline-offset: 4px;
+  }
 
   .btn-nav-list{
   display: flex;
@@ -95,6 +102,7 @@ box-shadow: -2px 4px 16px 0px #00000029;
   
   .form-card-divider {
     margin-bottom: 20px;
+    border: 1px solid #CCCCCC;
   }
   
   .form-group {
@@ -106,7 +114,8 @@ box-shadow: -2px 4px 16px 0px #00000029;
   }
   
   select,
-  textarea {
+  textarea,
+  input {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
@@ -118,19 +127,24 @@ box-shadow: -2px 4px 16px 0px #00000029;
   .submit-button {
     display: block;
     margin-left: auto;
-    padding: 10px;
+    padding: 10px 15px;
     border: none;
     border-radius: 4px;
-    background-color: #007bff;
+    background-color: black;
+    opacity: 0.6;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
   }
   
   .submit-button:hover {
-    background-color: #0056b3;
+    background-color: black;
+    opacity: 0.7;
   }
   
+  .form-card-title .feedback-text {
+    color:black;
+  }
 
   @media screen and (max-width: 480px) {
     .form-card {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './fab.css';
 
-const FormCard = ({ currentSection }) => {
+const ReportIssueForm = ({ currentSection }) => {
   const [selectedSection, setSelectedSection] = useState(currentSection);
   const [issueDescription, setIssueDescription] = useState('');
 
@@ -50,4 +50,4 @@ const FormCard = ({ currentSection }) => {
   );
 };
 
-export default FormCard;
+export default ReportIssueForm;
