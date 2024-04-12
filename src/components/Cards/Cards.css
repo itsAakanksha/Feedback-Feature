@@ -1,0 +1,84 @@
+.task {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;
+  gap: 16px;
+  max-width: 832px;
+  max-height: 351px;
+  background: #f8f8f8;
+  border: 0.4px solid #717171;
+  box-shadow: 8px 8px 25px rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+}
+
+.task p {
+  font-size: 20px;
+  font-family: Poppins;
+}
+.task .first-para {
+  font-weight: 500;
+
+
+}
+
+.tags {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.batch {
+  display: flex;
+}
+.tag {
+  display: flex;
+  flex-direction: row;
+  padding: 6px;
+  margin-left: 6px;
+  margin-right: 6px;
+  border-radius: 6px;
+  background: #a9d9ff;
+  font-family: "Inter";
+  font-size: 20px;
+  color: #2a2a2a;
+}
+.options {
+  background: transparent;
+  border: 0;
+
+}
+.startup-text{
+  font-size: 18px;
+  font-weight: 500;
+  color: #171717;
+  font-family: 'Inter';
+line-height: 27px;
+}
+
+
+.stats {
+  width: 100%;
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Poppins;
+font-weight: 500;
+ 
+
+
+}
+
+
+.stats .viewer {
+display: flex;
+align-items: center;
+}
+.stats .viewer span{
+  padding-left: 10px;
+}
+
+

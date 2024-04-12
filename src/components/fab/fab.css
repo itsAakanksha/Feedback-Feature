@@ -1,0 +1,139 @@
+.fab{
+    /* position: absolute; */
+    position: fixed;
+    z-index: 1;
+    bottom: 32px;
+    right: 32px;
+    padding-top: 10px;
+  }
+
+  .fab-flex{
+    position: fixed;
+    z-index: 1;
+    bottom: 32px;
+    right: 32px;
+    padding-top: 10px;
+    display: flex;
+  }
+
+  .fab-button{
+    background: #F8F8F8;
+   margin:15px 0 ;
+    /* color: #808080; */
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+
+  .btn-nav-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  
+  }
+
+  .comment{
+
+padding: 8px 16px;
+gap: 8px;
+background: #F8F8F8;
+border: 1px solid #CCCCCC;
+box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+border-radius: 4px;
+margin-left: auto;
+cursor: pointer;
+  }
+
+
+
+
+
+
+
+
+
+  /* FORM CARD CSS */
+
+  .form-card {
+    max-width: 430px;
+padding: 24px 16px 24px 16px;
+gap: 32px;
+border-radius: 8px;
+opacity: 0px;
+background-color: #F8F8F8;
+box-shadow: -2px 4px 16px 0px #00000029;
+
+
+  }
+  
+  .form-card-title {
+    margin-bottom: 15px;
+    font-size: 20px;
+    text-align: center;
+    font-size: Poppins;
+    color: #4D4D4D;
+
+  }
+  
+  .form-card-divider {
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  select,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #E0E0E0;
+  }
+  
+  .submit-button {
+    display: block;
+    margin-left: auto;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+
+  @media screen and (max-width: 480px) {
+    .form-card {
+      padding: 15px;
+    }
+  
+    .form-card-title {
+      font-size: 20px;
+    }
+  
+    .submit-button {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+    }
+  }

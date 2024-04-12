@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: Poppins;
+  /* font-size: 24px; */
+}
+
+body{
+background: #0f0f0f;
+}
+
+/* NAVBAR SECTON */
+.navbar {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px 20px;
+  width: 100vw;
+  box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  color: #fefefe80;
+}
+
+.navbar li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  gap: 10px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  color: rgba(254, 254, 254, 0.5);
+}
+
+.Logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #f8f8f8;
+  gap: 7px;
+  font-family: Montserrat;
+}
+
+.Logo span {
+  background: #f8f8f8;
+  color: #0f0f0f;
+  padding: 1px;
+}
+
+/* MAIN SECTION */
+main {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.backward {
+  width: 90vw;
+
+  margin: auto;
+}
+.backward-inner {
+  display: flex;
+  align-items: center;
+  color: #f8f8f8;
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 38px;
+  text-align: left;
+
+}
+
+.back-icon{
+  width: 40px;
+  height:40px;
+  padding-right: 10px;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+/* Drop down */
+
+.drop-down{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  color: white;
+}
+.drop-down .left-side{
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.drop-down .right-side{
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.paste-button {
+  position: relative;
+  display: block;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.button {
+  background-color: white;
+  color: #212121;
+  padding: 10px 15px;
+  font-size: 15px;
+  font-weight: bold;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  font-size: 13px;
+  position: absolute;
+  z-index: 1;
+  min-width: 200px;
+  background-color: #212121;
+  border: 2px solid white;
+  border-radius: 0px 15px 15px 15px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 8px 10px;
+  text-decoration: none;
+  display: block;
+  transition: 0.1s;
+}
+
+.dropdown-content a:hover {
+  background-color: white;
+  color: #212121;
+}
+
+.dropdown-content a:focus {
+  background-color: #212121;
+ 
+}
+
+.dropdown-content #top:hover {
+  border-radius: 0px 13px 0px 0px;
+}
+
+.dropdown-content #bottom:hover {
+  border-radius: 0px 0px 13px 13px;
+}
+
+.paste-button:hover button {
+  border-radius: 15px 15px 0px 0px;
+}
+
+.paste-button:hover .dropdown-content {
+  display: block;
+}
+
+/* FLOATING ACTION BUTTON */
+
+
+/* */
