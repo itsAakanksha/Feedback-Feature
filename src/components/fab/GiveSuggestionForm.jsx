@@ -1,18 +1,8 @@
 import React, { useState } from "react";
 import "./fab.css";
+import TextBoxField from './TextBoxField.jsx';
 
-function GiveSuggestionForm({ currentSection }) {
-  //     const [selectedSection, setSelectedSection] = useState(currentSection);
-  //   const [issueDescription, setIssueDescription] = useState('');
-
-  //   const handleSectionChange = (e) => {
-  //     setSelectedSection(e.target.value);
-  //   };
-
-  //   const handleDescriptionChange = (e) => {
-  //     setIssueDescription(e.target.value);
-  //   };
-
+function GiveSuggestionForm({ isLoggedIn }) {
   const [suggestion, setSuggestion] = useState("");
   const [section, setSection] = useState("");
   const [email, setEmail] = useState("");
@@ -20,10 +10,17 @@ function GiveSuggestionForm({ currentSection }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Logic to store suggestion and email
+    // Validate that suggestion field is filled
+    if (!suggestion) {
+      alert("Please fill out the suggestion field.");
+      return;
+    }
+    
+    // Logic to store suggestion and email (replace with your actual backend logic)
     console.log("Suggestion:", suggestion);
     console.log("Section:", section);
     console.log("Email:", email);
+    
     // Simulate submission
     setSubmitted(true);
     // Reset form
@@ -35,20 +32,15 @@ function GiveSuggestionForm({ currentSection }) {
   return (
     <div className="form-card">
       {submitted ? (
-        " "
+        <p>Thanks for your valuable suggestion!</p>
       ) : (
         <>
           <h2 className="form-card-title">
             Share your Suggestions with us for a chance to earn rewards!
           </h2>
           <hr className="form-card-divider" />
-        </>
-      )}
-      <form onSubmit={handleSubmit}>
-        {submitted ? (
-          <p>Thank you for your suggestion!</p>
-        ) : (
-          <>
+    
+          <form onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="section">Choose a section:</label>
               <select
@@ -66,35 +58,33 @@ function GiveSuggestionForm({ currentSection }) {
             <div className="form-group">
               <label htmlFor="suggestion">
                 Describe the suggestion in detail
+                <span> *</span>
               </label>
-              <textarea
-                id="suggestion"
-                rows="4"
+              <TextBoxField
                 value={suggestion}
                 onChange={(e) => setSuggestion(e.target.value)}
-                required
                 placeholder="Write here..."
-              ></textarea>
+              />
             </div>
-            <div className="form-group">
-              {email ? (
-                <p>Email: {email}</p>
-              ) : (
+            {isLoggedIn ? null : (
+              <div className="form-group">
+                <label htmlFor="email">Email: <span> *</span></label>
                 <input
                   type="email"
+                  id="email"
                   placeholder="Email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
                 />
-              )}
-            </div>
+              </div>
+            )}
             <button type="submit" className="submit-button">
               Submit
             </button>
-          </>
-        )}
-      </form>
+          </form>
+        </>
+      )}
     </div>
   );
 }

@@ -10,6 +10,9 @@ function Fabclose() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(false);
   const [selectedFeature, setSelectedFeature] = useState(null);
+  
+  // assuming user is not login
+  const  [LoggedIn,setLoggedIn] = useState(false)
 
   function handleFeatureClick(feature) {
     setSelectedFeature(feature);
@@ -22,15 +25,16 @@ function Fabclose() {
     setIsOpen(!isOpen);
     setSelectedFeature(null);
     setSelectedOption(false);
+
    
   }
   return (
     <>
       <div className={`${selectedOption ? "main-fab" : "fab"}`}>
         {selectedFeature === "Report an Issue" && <ReportIssueForm />}
-        {selectedFeature === "Share Feedback" && <ShareFeedbackForm />}
-        {selectedFeature === "Give Suggestion" && <GiveSuggestionForm />}
-        {selectedFeature === "Contact Us" && <ContactUsForm />}
+        {selectedFeature === "Share Feedback" && <ShareFeedbackForm isLoggedIn={LoggedIn}  />}
+        {selectedFeature === "Give Suggestion" && <GiveSuggestionForm isLoggedIn={LoggedIn} />}
+        {selectedFeature === "Contact Us" && <ContactUsForm isLoggedIn={LoggedIn} />}
       </div>
       <div className={`${selectedOption ? "fab-flex" : "fab"}`}>
         {isOpen && (

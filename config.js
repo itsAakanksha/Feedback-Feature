@@ -10,6 +10,8 @@ import fab from './src/assets/fab.svg'
 import contact from './src/assets/contact.svg'
 import suggestion from './src/assets/suggestion.svg'
 import flag from './src/assets/flag.svg'
+import asterisk from './src/assets/asterisk.svg'
+import attach from './src/assets/ic_round-attach-file.svg'
 const svg = {
     ellipse,
     arrow,
@@ -23,6 +25,8 @@ const svg = {
     feedback,
     suggestion,
     flag,
+    asterisk,
+    attach,
     
 }
 

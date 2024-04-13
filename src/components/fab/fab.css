@@ -1,163 +1,201 @@
-.fab{
-    /* position: absolute; */
-    position: fixed;
-    z-index: 1;
-    bottom: 32px;
-    right: 32px;
-    padding-top: 10px;
+.fab {
+  /* position: absolute; */
+  position: fixed;
+  z-index: 1;
+  bottom: 32px;
+  right: 32px;
+  padding-top: 10px;
+}
 
-  }
+.fab-flex {
+  position: fixed;
+  z-index: 1;
+  bottom: 32px;
+  right: 32px;
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  /* margin-left: auto; */
+}
 
-  .fab-flex{
-    position: fixed;
-    z-index: 1;
-    bottom: 32px;
-    right: 32px;
-    padding-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    /* margin-left: auto; */
-  }
+.main-fab {
+  position: fixed;
+  bottom: 130px;
+  right: 32px;
+}
 
-  .main-fab{
-   position: fixed;
-   bottom: 130px;
-    right: 32px;
-   
-  }
+.fab-button {
+  background: #f8f8f8;
+  margin: 15px 5px;
+  /* color: #808080; */
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
 
-  .fab-button{
-    background: #F8F8F8;
-   margin:15px 5px ;
-    /* color: #808080; */
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-  }
+.selected-btn {
+  box-shadow: 1px 1px 8px 0px #00000080;
+  outline: 2px solid grey; /* Adjust outline color and width as needed */
+  /* border: 4px solid grey; */
+  outline-offset: 4px;
+}
 
-  .selected-btn{
-    box-shadow: 1px 1px 8px 0px #00000080;
-     outline: 2px solid grey; /* Adjust outline color and width as needed */
-     /* border: 4px solid grey; */
-     outline-offset: 4px;
-  }
-
-  .btn-nav-list{
+.btn-nav-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
+}
+
+.comment {
+  padding: 8px 16px;
+  gap: 8px;
+  background: #f8f8f8;
+  border: 1px solid #cccccc;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+/* FORM CARD CSS */
+
+.form-card {
+  max-width: 430px;
+  padding: 24px 16px 24px 16px;
+  gap: 32px;
+  border-radius: 8px;
+  opacity: 0px;
+  background-color: #f8f8f8;
+  box-shadow: -2px 4px 16px 0px #00000029;
+}
+
+.form-card-title {
+  margin-bottom: 15px;
+  font-size: 20px;
+  text-align: center;
+  font-size: Poppins;
+  color: #4d4d4d;
+}
+
+.form-card-divider {
+  margin-bottom: 20px;
+  border: 1px solid #cccccc;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+select,
+textarea,
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #e0e0e0;
+}
+
+.submit-button {
+  display: block;
+  margin-left: auto;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: black;
+  opacity: 0.6;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: black;
+  opacity: 0.7;
+}
+
+.form-card-title .feedback-text {
+  color: black;
+}
+
+.form-group label span {
+  color: red;
+  margin-left: 4px;
+}
+
+.attach-button {
+  position: absolute;
+  width: 102px;
+  height: 32px;
+  padding: 4px 10px 4px 4px;
+  border-radius: 4px;
+  border: none;
+  background: #C7C7C7;
+  bottom: 20px;
+  left: 15px;
   
-  }
-
-  .comment{
-
-padding: 8px 16px;
-gap: 8px;
-background: #F8F8F8;
-border: 1px solid #CCCCCC;
-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
-border-radius: 4px;
-margin-left: auto;
+ display: flex;
+align-items: center;
+justify-content: center;
 cursor: pointer;
-  }
+ 
+}
+.remove-btn{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  
+}
+.att-close{
+  width: 13px;
+  height: 13px;
+  background: none;
+
+}
+.text-area-container{
+  position: relative;
+}
 
 
+textarea::-webkit-scrollbar {
+  width: 6px; /* Width of the scrollbar */
+  height: 48px;
+}
 
+textarea::-webkit-scrollbar-thumb {
+  background-color: #999999; /* Color of the scrollbar thumb */
+  border-radius: 12px; /* Border radius of the scrollbar thumb */
+}
 
+textarea::-webkit-scrollbar-track {
+  background-color: #f0f0f0; /* Color of the scrollbar track */
+}
 
-
-
-
-
-  /* FORM CARD CSS */
-
+@media screen and (max-width: 480px) {
   .form-card {
-    max-width: 430px;
-padding: 24px 16px 24px 16px;
-gap: 32px;
-border-radius: 8px;
-opacity: 0px;
-background-color: #F8F8F8;
-box-shadow: -2px 4px 16px 0px #00000029;
-
-
+    padding: 15px;
   }
-  
+
   .form-card-title {
-    margin-bottom: 15px;
     font-size: 20px;
-    text-align: center;
-    font-size: Poppins;
-    color: #4D4D4D;
+  }
 
-  }
-  
-  .form-card-divider {
-    margin-bottom: 20px;
-    border: 1px solid #CCCCCC;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  label {
-    font-weight: bold;
-  }
-  
-  select,
-  textarea,
-  input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: #E0E0E0;
-  }
-  
   .submit-button {
     display: block;
-    margin-left: auto;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    background-color: black;
-    opacity: 0.6;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
   }
-  
-  .submit-button:hover {
-    background-color: black;
-    opacity: 0.7;
-  }
-  
-  .form-card-title .feedback-text {
-    color:black;
-  }
-
-  @media screen and (max-width: 480px) {
-    .form-card {
-      padding: 15px;
-    }
-  
-    .form-card-title {
-      font-size: 20px;
-    }
-  
-    .submit-button {
-      display: block;
-      width: 100%;
-      margin-top: 10px;
-    }
-  }
+}
