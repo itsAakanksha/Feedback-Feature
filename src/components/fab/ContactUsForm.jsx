@@ -38,8 +38,14 @@ const handleSubmit = (e) => {
    const isDisabled = !name || !question || (!email && !mobile);
   return (
     <div className="form-card">
+    {
+        submitted ? " " :
+    ( <>
     <h2 className="form-card-title">Get in Contact with us for your queries!</h2>
     <hr className="form-card-divider" />
+    </>
+)
+}
     <form onSubmit={handleSubmit}>
     {submitted ? (
       <p>Thank you for contacting us!</p>

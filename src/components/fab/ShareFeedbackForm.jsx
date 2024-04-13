@@ -34,9 +34,14 @@ function ShareFeedbackForm({ currentSection }) {
   };
   return (
     <div className="form-card">
-    <h2 className="form-card-title">Let us know your <strong className='feeback-text'>Feedback</strong> to us!</h2>
-    <hr className="form-card-divider" />
-
+    {
+        submitted ? " " :
+    ( <>
+      <h2 className="form-card-title">Let us know your <strong className='feeback-text'>Feedback</strong> to us!</h2>
+      <hr className="form-card-divider" />
+      </>
+    )
+  }
     <form onSubmit={handleSubmit}>
         {submitted ? (
           <p>Thank you for your feedback!</p>
