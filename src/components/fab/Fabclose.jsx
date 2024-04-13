@@ -1,7 +1,8 @@
 import React from "react";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import "./fab.css";
 import svg from "../../../config";
+import './fab-responsive.css'
 import ReportIssueForm from "./ReportIssueForm";
 import ShareFeedbackForm from "./ShareFeedbackForm";
 import ContactUsForm from "./ContactUsForm";
@@ -10,6 +11,20 @@ function Fabclose() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(false);
   const [selectedFeature, setSelectedFeature] = useState(null);
+
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    // Updating the state based on the screen width
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 768);
+    };
+    handleResize(); 
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  
   
   // assuming user is not login
   const  [LoggedIn,setLoggedIn] = useState(false)
@@ -30,13 +45,14 @@ function Fabclose() {
   }
   return (
     <>
-      <div className={`${selectedOption ? "main-fab" : "fab"}`}>
+     <div className="action-buttons">
+      <div className={`${selectedOption ? "main-fab" : "fab"} ${selectedOption && isSmallScreen ? "" : ""} `}>
         {selectedFeature === "Report an Issue" && <ReportIssueForm />}
         {selectedFeature === "Share Feedback" && <ShareFeedbackForm isLoggedIn={LoggedIn}  />}
         {selectedFeature === "Give Suggestion" && <GiveSuggestionForm isLoggedIn={LoggedIn} />}
         {selectedFeature === "Contact Us" && <ContactUsForm isLoggedIn={LoggedIn} />}
       </div>
-      <div className={`${selectedOption ? "fab-flex" : "fab"}`}>
+      <div className={`${selectedOption  ? "fab-flex" : ""}`}>
         {isOpen && (
           <>
             <div className="btn-nav-list">
@@ -84,15 +100,26 @@ function Fabclose() {
 
         <div className="btn-nav-list">
           <div></div>
-          <button className="fab-button" onClick={() => handleClick()}>
-            {isOpen ? (
-              <img src={svg.close} className="fab-icon" alt="" />
-            ) : (
-              <img src={svg.fab} className="fab-icon" alt="" />
-            )}
-          </button>
+          <button className={`fab-button ${!isOpen && isSmallScreen ? "fab-button-inv" : ""}`} onClick={handleClick}>
+          {isOpen ? (
+            <img
+              src={svg.close}
+              className="fab-icon"
+              alt=""
+            />
+          ) : (
+            <img
+              src={isSmallScreen ? svg.likeStar : svg.fab}
+              className="fab-icon"
+              alt=""
+            />
+          )}
+        </button>
         </div>
       </div>
+
+      </div>
+
     </>
   );
 }

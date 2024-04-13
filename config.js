@@ -12,6 +12,9 @@ import suggestion from './src/assets/suggestion.svg'
 import flag from './src/assets/flag.svg'
 import asterisk from './src/assets/asterisk.svg'
 import attach from './src/assets/ic_round-attach-file.svg'
+import likeStar from './src/assets/Group 49.svg'
+import star from './src/assets/Star - M.svg'
+
 const svg = {
     ellipse,
     arrow,
@@ -27,6 +30,8 @@ const svg = {
     flag,
     asterisk,
     attach,
+    likeStar,
+    star
     
 }
 

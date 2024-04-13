@@ -82,3 +82,32 @@ align-items: center;
 }
 
 
+@media only screen and (max-width: 768px) {
+  .task {
+    padding: 12px; /* Adjust padding for smaller screens */
+  }
+
+  .task p {
+    font-size: 14px; /* Decrease font size for smaller screens */
+  }
+
+  .tags .tag {
+    padding: 6px 10px; /* Adjust padding for smaller screens */
+    font-size: 12px; /* Decrease font size for smaller screens */
+  }
+
+  .options img,
+  .viewer img {
+    width: 20px; /* Make SVG icons smaller for smaller screens */
+    height: 20px; /* Make SVG icons smaller for smaller screens */
+  }
+
+  .startup-text {
+    font-size: 14px; /* Decrease font size for smaller screens */
+    line-height: 1.4; /* Adjust line height for smaller screens */
+  }
+
+  .stats .viewer span {
+    padding-left: 6px; /* Adjust spacing for smaller screens */
+  }
+}

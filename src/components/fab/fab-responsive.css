@@ -1,0 +1,54 @@
+@media (max-width:480px) {
+    .fab {
+      
+        bottom: 24px;
+        right: 24px;
+        /* padding-top: 10px; */
+      }
+      
+      .fab-flex {
+        bottom: 24px;
+        right: 24px;
+      }
+      .fab-button-inv{
+        background: #0F0F0F;
+        /* color: #F8F8F8; */
+      }
+
+      .fab-button{
+        width: 48px;
+        height: 48px;
+      }
+
+      .action-buttons{
+          position: absolute;
+          top: 24px;
+       
+        display: flex;
+        flex-direction: column-reverse;
+        /* border: 2px solid red; */
+       
+      }
+
+      .form-card {
+        width: 90vw;
+      }
+      .form-card-title {
+        margin-bottom: 10px;
+        font-size: 16px;
+        text-align: center;
+        
+      }
+
+      label{
+        font-size: 14px;
+      }
+    
+
+      select,
+      textarea,
+      input {
+        font-size: 14px;
+        padding: 6px;
+      }
+}

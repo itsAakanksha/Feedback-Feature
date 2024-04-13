@@ -1,27 +1,35 @@
 .fab {
   /* position: absolute; */
-  position: fixed;
+  /* position: fixed; */
   z-index: 1;
   bottom: 32px;
   right: 32px;
   padding-top: 10px;
+}
+.action-buttons{
+  position: fixed;
+  z-index: 1;
+  bottom: 32px;
+  right: 32px;
+  
 }
 
 .fab-flex {
-  position: fixed;
+  /* position: fixed; */
   z-index: 1;
-  bottom: 32px;
-  right: 32px;
+  /* bottom: 32px;
+  right: 32px; */
   padding-top: 10px;
   display: flex;
-  flex-wrap: wrap;
-  /* margin-left: auto; */
+  justify-content: space-evenly;
+
+  width: 100%;
 }
 
 .main-fab {
-  position: fixed;
-  bottom: 130px;
-  right: 32px;
+  /* position: fixed; */
+  /* bottom: 130px;
+  right: 32px; */
 }
 
 .fab-button {
@@ -68,7 +76,7 @@
 /* FORM CARD CSS */
 
 .form-card {
-  max-width: 430px;
+  width: 430px;
   padding: 24px 16px 24px 16px;
   gap: 32px;
   border-radius: 8px;
@@ -84,6 +92,7 @@
   font-size: Poppins;
   color: #4d4d4d;
 }
+
 
 .form-card-divider {
   margin-bottom: 20px;
@@ -199,3 +208,4 @@ textarea::-webkit-scrollbar-track {
     margin-top: 10px;
   }
 }
+

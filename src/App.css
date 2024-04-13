@@ -62,6 +62,16 @@ background: #0f0f0f;
   padding: 1px;
 }
 
+
+
+
+@media screen and (max-width: 768px) {
+  .navbar li:nth-child(1),
+  .navbar li:nth-child(2) {
+    display: none;
+  }
+}
+
 /* MAIN SECTION */
 main {
   margin-top: 20px;
@@ -182,6 +192,45 @@ main {
 
 .paste-button:hover .dropdown-content {
   display: block;
+}
+
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+    margin: 0px;
+  }
+
+  .back-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .backward-inner {
+    font-size: 15px;
+  }
+
+  .drop-down .left-side {
+    font-size: 16px;
+  }
+  .drop-down{
+    padding: 16px 4px;
+  }
+
+  .button {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  .dropdown-content {
+    min-width: 150px;
+  }
+
+  .dropdown-content a {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
 }
 
 /* FLOATING ACTION BUTTON */
